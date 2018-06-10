@@ -4,8 +4,7 @@
   "scripts": {
     "coverage": "NODE_ENV=test NODE_CONFIG_DIR=server/config node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --ui tdd -R spec -t 10000 --recursive server/tests && node node_modules/istanbul/lib/cli.js report clover",
     "precommit": "eslint ./server server.js",
-    "complexity": "node ./node_modules/.bin/plato -e .eslintrc -r -d complexity server",
-    "prepush": "yarn run coverage"
+    "complexity": "node ./node_modules/.bin/plato -e .eslintrc -r -d complexity server"
   },
   "engines": {
     "node": "latest"
