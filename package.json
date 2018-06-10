@@ -7,7 +7,8 @@
     "complexity": "node ./node_modules/.bin/plato -e .eslintrc -r -d complexity server"
   },
   "engines": {
-    "node": "latest"
+    "node": "9.11.1",
+    "npm": "5.6.0"
   },
   "dependencies": {
     "automapper-ts": "^1.9.0",
