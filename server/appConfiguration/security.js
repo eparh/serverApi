@@ -1,8 +1,7 @@
 'use strict';
 
 const jwt = require('koa-jwt');
-const config = require('config');
-const secret = config.get('jwt.secret');
+const secret = process.env.JWT_SECRET;
 const { unauthorized } = require('../constants').STATUS_CODES;
 
 module.exports = (app) => {

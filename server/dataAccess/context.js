@@ -18,7 +18,9 @@ class DbContext {
     }
 
     connect() {
-        return this.db.connect(uri);
+        return this.db.connect(uri, {
+            useMongoClient: true
+        });
     }
 
     disconnect() {
