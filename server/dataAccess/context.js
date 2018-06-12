@@ -2,7 +2,7 @@
 
 const path = require('path');
 
-const config = require('config').get('database');
+const uri = process.env.MONGODB_URI;
 const mongoose = require('mongoose');
 
 const filesHelper = require('../helpers/filesHelper');
@@ -18,9 +18,7 @@ class DbContext {
     }
 
     connect() {
-        const { uri, options } = config;
-
-        return this.db.connect(uri, options);
+        return this.db.connect(uri);
     }
 
     disconnect() {
