@@ -1,6 +1,6 @@
 .idea
 *.DS_Store
 node_modules/
-config/
+config/test.json
 database
 
